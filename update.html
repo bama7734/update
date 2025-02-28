@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Patient Information</title>
+    <style>
+        /* Simple styling for better readability */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Update Patient Information</h2>
+        <form id="updatePatientForm" action="/update-patient" method="post">
+            <!-- Patient ID (Assuming it's not meant to be changed, so it's disabled) -->
+            <label for="patientId">Patient ID:</label>
+            <input type="text" id="patientId" name="patientId" disabled value="12345">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <button type="submit">Update Information</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
